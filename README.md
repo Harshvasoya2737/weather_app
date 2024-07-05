@@ -1,4 +1,4 @@
-UI Of Weather App & Screenshots
+
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/8de19f69-88ee-4716-b678-86a89b73e7c0" alt="9" style="width: 200px; height: 450px;">
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/b2a135a0-a931-4ef8-acd6-6d49177a0237" alt="8" style="width: 200px; height: 450px;">
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/7324415e-e7f0-4660-ab15-80c144f4e5e1" alt="7" style="width: 200px; height: 450px;">
