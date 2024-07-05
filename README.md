@@ -1,5 +1,5 @@
 UI Of Weather App & Screenshots
-<img src="![WhatsApp Image 2024-07-05 at 21 21 40_e94ffd65](https://github.com/Harshvasoya2737/weather_app/assets/148517061/8d3c87fc-93e9-413c-94f1-5a286d5c307b)" alt="1" style="width: 200px; height: 450px;">
+<img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/8d3c87fc-93e9-413c-94f1-5a286d5c307b" alt="1" style="width: 200px; height: 450px;">
 <img src="![WhatsApp Image 2024-07-05 at 21 21 40_e94ffd65](https://github.com/Harshvasoya2737/weather_app/assets/148517061/8d3c87fc-93e9-413c-94f1-5a286d5c307b)" alt="1" style="width: 200px; height: 450px;">
 
 ![WhatsApp Image 2024-07-05 at 21 21 41_48fd5c6e](https://github.com/Harshvasoya2737/weather_app/assets/148517061/2f47bea5-762b-44ce-8c90-35ab99a63a2c)
