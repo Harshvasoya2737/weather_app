@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var sp = Provider.of<SearchProvider>(context);
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text(
           sp.loc ?? "",
@@ -49,6 +50,7 @@ class _HomePageState extends State<HomePage> {
           })
         ],
         centerTitle: true,
+        backgroundColor: Colors.transparent,
       ),
       resizeToAvoidBottomInset: false,
       body: FutureBuilder(
@@ -94,37 +96,41 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: Colors.transparent),
-                      child: TextFormField(
-                        controller: search,
-                        decoration: InputDecoration(
-                          hintText: "Search Your Location",
-                          prefixIcon: Icon(
-                            Icons.search,
-                            color: Colors.white,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 50),
+                        child: TextFormField(
+                          controller: search,
+                          decoration: InputDecoration(
+                            hintText: "Search Your Location",
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.white,
+                            ),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  search.clear();
+                                },
+                                icon: Icon(Icons.close_outlined)),
+                            hintStyle: TextStyle(color: Colors.white),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(color: Colors.white),
+                            ),
                           ),
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                search.clear();
-                              },
-                              icon: Icon(Icons.close_outlined)),
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
-                            borderSide: BorderSide(color: Colors.grey),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
-                            borderSide: BorderSide(color: Colors.white),
-                          ),
+                          onFieldSubmitted: (value) async {
+                            sp.searchloc(value);
+                            String baseUrl =
+                                "https://api.weatherapi.com/v1/forecast.json?key=e09f03988e1048d2966132426232205&q=";
+                            String endUrl = "$value&aqi=no";
+                            String api = baseUrl + endUrl;
+                            res = await http.get(Uri.parse(api));
+                            search.clear();
+                          },
                         ),
-                        onFieldSubmitted: (value) async {
-                          sp.searchloc(value);
-                          String baseUrl =
-                              "https://api.weatherapi.com/v1/forecast.json?key=e09f03988e1048d2966132426232205&q=";
-                          String endUrl = "$value&aqi=no";
-                          String api = baseUrl + endUrl;
-                          res = await http.get(Uri.parse(api));
-                        },
                       ),
                     ),
                     res?.statusCode == 400
