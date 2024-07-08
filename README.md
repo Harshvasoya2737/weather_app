@@ -1,7 +1,3 @@
-Sure! Here's a description for your weather application in your README.md file:
-
----
-
 # Weather App
 
 ## Description
