@@ -17,7 +17,7 @@ Welcome to the Weather App, a beautifully designed and easy-to-use application b
 - **Animated Weather Icons**: Visualize the current weather conditions with beautiful animated icons.
 - **Responsive Design**: The app is fully responsive and works seamlessly on both Android and iOS devices.
 
-
+## Here I am sharing you the screenshot and UI of my Weather app application
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/8de19f69-88ee-4716-b678-86a89b73e7c0" alt="1" style="width: 200px; height: 450px;">
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/b2a135a0-a931-4ef8-acd6-6d49177a0237" alt="2" style="width: 200px; height: 450px;">
 <img src="https://github.com/Harshvasoya2737/weather_app/assets/148517061/78b1ff66-2bd7-4803-bf59-9ab93551088f" alt="3" style="width: 200px; height: 450px;">
